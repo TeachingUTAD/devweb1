@@ -7,7 +7,7 @@
 - Elegir la hora de entrada de las clases y la de salida
 - Elegir el color preferido para pintar las aulas
 - La nota que vais a sacar en programación Web en un rango de 5 a 10
-- Una barra de prograso que camine a medida que se vaya completando el formulario
+- Una barra de progreso fake, solo para verla
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +15,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Encuesta</title>
 </head>
 <body>
-    
+    <form method="POST" action="procesar()">
+    <fieldset>
+        <legend>Datos Personales</legend>
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" placeholder="Inserta Nombre y apellidos" required autofocus/>
+        </p>
+        <p>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" value="18" required />
+        </p>
+        <p>
+            <label for="telefono">Telefono:</label>
+            <input type="tel" name="telefono" autocomplete="+3400000000" />
+        </p>
+        <p>
+            <label for="mail">Email:</label>
+            <input type="email" name="mail" required />
+        </p>
+        <p>
+            <label for="nacimiento">Fecha de nacimiento:</label>
+            <input type="date" name="nacimiento" required />
+        </p>
+        <p>
+            <label for ="tipo_votante">Eligue tu perfil:</label>
+            <select name="tipo_votante">
+ 
+                    <option value="1" selected>Alumno</option>
+                    <option value="2">Profesor</option>
+                    <option value="3">Otro personal</option>
+            </select>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Propuestas para los presupuestos participativos de U-TAD</legend>
+        <p>
+            <label for="propuestas">Propuestas participativas:</label><br />
+    <input type="checkbox" name="propuestas" value="1" />Ampliacion de cafetería<br>
+    <input type="checkbox" name="propuestas" value="2" />Construccion de piscina<br>
+    <input type="checkbox" name="propuestas" value="3" />Jaulas para los alumnos enfadados<br>
+    <input type="checkbox" name="propuestas" value="4" />Mazmorras donde guardar fieras para sacarlas cuando haga falta
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Otras Propuestas</legend>
+        <p>
+            <label for="horaentrada">Hora de entrada a clases:</label>
+            <input type="time" name="horaentrada"/>
+        </p>
+        <p>
+            <label for="color">Color aulas:</label>
+            <input type="color" name="color" value="black" />
+        </p>
+        <p>
+            <label for="nota">Nota:</label>
+            <input type="range" name="nota" min="5" max="10" />
+        </p>
+    </fieldset>
+
+    <p>
+        <progress max="100" value="70"> 70% </progress>
+        <input type="submit" value="Enviar" />
+    </p>
+    </form>
 </body>
 </html>
