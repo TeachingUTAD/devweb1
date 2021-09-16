@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  background-color:whitesmoke;
+  font-family: 'Exo 2', sans-serif;
+  font-size: small;
+}
+
+th,
+td {
+  border: 1px solid ghostwhite;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.asignatura {
+    background-color: bisque;
+    border: 1px double ghostwhite;
+    padding: 0px;
+    width: 200px;
+    text-align: center;
+}
+
+.asignatura .texto{
+    background-color: darkgray;
+}
+
+.asignatura .horaini{
+    text-align: left;
+}
+
+.asignatura .horafin{
+    text-align: right;
+}

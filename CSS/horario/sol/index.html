@@ -1,13 +1,7 @@
-<!-- Crear una pagina web que nos muestre el horario de este trimestre. Algunos requisitos:
-- Tendra una fila de cabecera con los dias de la semana y una columna inicial con los tramos horarios
-- Habra filas que ocupen mas columnas para indicar la hora de los descansos y las comidas
-- Habra algunas clases que ocupen varios tramos horarios contiguos
-- En donde esté la asignatura de programación Web, habra una lista no ordenada, indicando que podemos dar Teoría y Práctica
-- Cada asignatura tiene su color, y las celdas de descansos y comidas también
-- Probemos a ponerle borde o no, colapsarlo y también a ponerle un grosor
-- El texto en todas las celdas ha de estar centrado, las cabeceras en negrita
-- Hagamos que todas las celdas tengan la misma anchura, una que permita que se vean las asignaturas de forma clara
-- Le ponemos un favicon?
+<!-- Basada en la pagina que creamos para el horario, añadir estilos para que, de forma muy sencilla
+    se pueda dar estilo al horario y que se parezca mucho más a la imagen del original. 
+    Tomar una fuente de google fonts.
+    Si quisieramos añadir una clase mas en una celda, que fuera aún más sencillo.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -17,22 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horario</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/1428logo-utad.ico">
-
-    <style>
-        table {
-            border-collapse: collapse;
-            background-color: silver;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: small;
-        }
-
-        th,td {
-            border: 1px solid gray;
-            padding: 20px;
-            width: 200px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -49,19 +31,19 @@
         <tbody>
         <tr>
             <th>8:00</th>
-            <td colspan="5" bgcolor="gray"></td>
+            <td colspan="5"></td>
             
         </tr>
         <tr>
             <th>9:00</th>
             <td colspan="4" rowspan="2"></td>
-            <td rowspan="2">
-                <p style="text-align: left;">9:00</p>
+            <td class="asignatura" rowspan="2">
+                <div class="horaini">9:00</div>
 
-                <p style="background: steelblue;">Programación Web I: Cli
+                <div class="texto">Programación Web I: Cli
                     <ul><li>Teoría</li><li>Práctica</li></ul>
-                </p>
-                <p style="text-align: right;">11:00</p>
+                </div>
+                <div class="horafin">11:00</div>
             </td>
         </tr>
         <tr>
@@ -70,20 +52,30 @@
         </tr>
         <tr>
             <th>11:00</th>
-            <td rowspan="2">
-                <p>INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</p>
+            <td class="asignatura" rowspan="2">
+                <div class="horaini">9:00</div>
+                <div class="texto">INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</div>
+                <div class="horafin">11:00</div>
             </td>
-            <td rowspan="2">
-                <p>INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</p>
+            <td class="asignatura" rowspan="2">
+                <div class="horaini">9:00</div>
+                <div class="texto">INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</div>
+                <div class="horafin">11:00</div>
             </td>
-            <td rowspan="2">
-                <p>INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</p>
+            <td class="asignatura" rowspan="2">
+                <div class="horaini">9:00</div>
+                <div class="texto">INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</div>
+                <div class="horafin">11:00</div>
             </td>
-            <td rowspan="2">
-                <p>INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</p>
+            <td class="asignatura" rowspan="2">
+                <div class="horaini">9:00</div>
+                <div class="texto">INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</div>
+                <div class="horafin">11:00</div>
             </td>
-            <td rowspan="2">
-                <p>INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</p>
+            <td class="asignatura" rowspan="2">
+                <div class="horaini">9:00</div>
+                <div class="texto">INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</div>
+                <div class="horafin">11:00</div>
             </td>
         </tr>
         <tr>
@@ -91,17 +83,25 @@
         </tr>
         <tr>
             <th>13:00</th>
-            <td rowspan="2">
-                <p>INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</p>
+            <td class="asignatura" rowspan="2">
+                <div class="horaini">9:00</div>
+                <div class="texto">INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</div>
+                <div class="horafin">11:00</div>
             </td>
-            <td rowspan="2">
-                <p>INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</p>
+            <td class="asignatura" rowspan="2">
+                <div class="horaini">9:00</div>
+                <div class="texto">INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</div>
+                <div class="horafin">11:00</div>
             </td>
-            <td rowspan="2">
-                <p>INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</p>
+            <td class="asignatura" rowspan="2">
+                <div class="horaini">9:00</div>
+                <div class="texto">INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</div>
+                <div class="horafin">11:00</div>
             </td>
-            <td rowspan="2">
-                <p>INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</p>
+            <td class="asignatura" rowspan="2">
+                <div class="horaini">9:00</div>
+                <div class="texto">INSO3A<br>Dir. Gest. Proyectos<br>Eugenio Sillero<br>MD101</div>
+                <div class="horafin">11:00</div>
             </td>
             <td rowspan="2">
                
