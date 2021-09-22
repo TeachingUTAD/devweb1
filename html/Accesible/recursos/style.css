@@ -46,18 +46,18 @@ h1 {
   text-align: center;
   margin: 0;
 }
-#header {
+header {
   background: black;
   color: white;
   margin: 0;
   padding: 1.75em 0;
 }
-#header p {
+header p {
   text-align: center;
   font-size: medium;
   line-height: 2.154;
 }
-#header a {
+header a {
   color: white;
 }
 #arc th,
@@ -69,7 +69,7 @@ h1 {
 #arc th {
   text-align: right;
 }
-#footer,
+footer,
 .c {
   text-align: center;
   clear: both;
@@ -86,14 +86,17 @@ h1 {
   font-size: small;
   margin: 2px 0 0 0;
 }
-#nav ul {
+nav ul {
   margin: 0;
   padding: 0 1em 0 0;
   text-align: center;
 }
-#nav li {
+nav li {
   display: inline;
   padding-left: 1em;
+}
+nav a:link{
+  color: white;
 }
 .sectionSign:before {
   content: "\00A7";

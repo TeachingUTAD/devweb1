@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript: Basicos</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // 0. MENSAJES
+            // Alert
+            alert('Hello world!')
+            // Console
+            console.log('Logged message')
+            console.info('Info message')
+            console.error('Error message')
+            console.warn('Warning message')
+            // Debugger: ACTIVACION
+            debugger
+            console.log('After debugger')
+
+            // 1. VARIABLES
+            // variables globales y locales, scope o ambito
+            const message = 'Hello world!'
+            console.log(message)
+            if (true) {
+                const text = 'whatever'
+                console.log(text)
+            }
+            //console.log(text)
+
+            // Cambiar el valor de una constante?
+            const name = 'Nayra';
+            console.log(name)
+            //name = 'Isabel';
+
+            // Diferencia let/var
+            let mejor = 'variable con scope';
+            var peor = 'variable sin scope';
+            console.log(peor)
+            console.log(mejor)
+            if(true){
+                console.log(peor)
+                console.log(mejor)
+                let mejor2 = 'variable con scope local';
+                var peor2 = 'variable sin scope, pret. local';
+            }
+            console.log(peor2)
+            //console.log(mejor2)
+
+            // 2. NUMEROS
+            // + Sumar
+            console.log(2 + 2)
+            // - Restar
+            console.log(3 - 1)
+            // * Multiplicar
+            console.log(3 * 2)
+            // / Dividir
+            console.log(4 / 2)
+            // < Menor que
+            console.log(10 < 20)
+            // > Mayor que
+            console.log(40 > 20)
+            // <= Menor o igual que
+            console.log(10 <= 20)
+            // >= Mayor o igual que
+            console.log(50 >= 40)
+            // == Igual que (Check value)
+            console.log(40 == 40) // TRUE
+            console.log(40 == '40') // TRUE
+            // === Igual que (Check value and type)
+            console.log(40 === 40) // TRUE
+            console.log(40 === '40') // FALSE
+            // != No es igual que
+            console.log(30 !== 30)
+            // typeof
+            let num = 20
+            console.log(typeof num)
+            // NaN
+            const notNumber = 'asfda';
+            isNaN(NaN)
+            // isNaN()
+            console.log(isNaN(NaN))
+            console.log(isNaN('whatever'))
+            console.log(isNaN('12'))
+            console.log(isNaN(12))
+            // toString()
+            let number = 100.1164123412
+            console.log(number.toString())
+            console.log(typeof number.toString())
+            // .toFixed()
+            console.log(number.toFixed(2))
+            /*
+             * Obtener el total gastado en la compra de estos productos, aplica el descuento indicado.
+             * 
+             * Móvil (300€) + Cascos (30€) + Funda (10€)
+             * Descuento 10%
+             * La compra tiene un IVA del 21%
+             */
+            const PRICE_MOBILE = 300;
+            const PRICE_HEADPHONES = 30;
+            const PRICE_MOBILE_CASE = 10;
+            const DISCOUNT = 10;
+            const IVA = 1 + 21/100;
+            const TOTAL = PRICE_MOBILE + PRICE_HEADPHONES + PRICE_MOBILE_CASE;
+            const SUBTOTAL1 = TOTAL * DISCOUNT / 100;
+            const SUBTOTAL2 = SUBTOTAL1 * IVA;
+            console.log(SUBTOTAL2)
+
+            // 4. CADENAS
+            // concatenar texto
+            console.log('Hello ' + 'World')
+            // template literals
+            const name = 'Nayra'
+            console.log(`Hello ${name} que pases un buen dia`)
+            // typeof
+            console.log(typeof name)
+            // .length
+            console.log(name.length)
+            // .includes()
+            console.log(name.includes('asdfasdf'))
+            // .slice(start, end)
+            console.log(name.slice(2, 5))
+            // .replace(‘este texto', ‘por este otro’)
+            console.log(name.replace('na', 'asdfas'))
+            // .trim()
+            const text = '   as dfas a asdfasd a    '
+            console.log(text.trim())
+            // .split(‘,’)
+            const geolocation = 'Calle whatever. 7. 1D'
+            console.log(geolocation.split('.'))
+
+            // 5. BOOLEANS
+            
+
+        </script>
+    </body>
+</html>
