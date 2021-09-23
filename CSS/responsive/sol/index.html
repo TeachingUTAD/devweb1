@@ -8,12 +8,11 @@
 
     <link rel="stylesheet" type="text/css" href="css/estilos.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Righteous"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
 
-     <!-- Para el símbolo para mostrar el menú -->
+     <!-- Para el símbolo para mostrar el menú, fuente: https://fontawesomeicons.com/-->
      <link
      rel="stylesheet"
      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -23,8 +22,8 @@
   </head>
   <body>
     <div class="container">
-      <header class="verde">
-        <h1>Responsivo</h1>
+      <header class="azul">
+        <h1>Pagina responsiva</h1>
         <nav>
           <div class="icon"><i class="fa fa-bars"></i></div>
           <div class="menu_item">INICIO</div>
@@ -36,20 +35,16 @@
         <section class="main_text">
           <div>
             <h3>PROYECTO PRÁCTICO</h3>
-            <h1 class="verde">DISEÑO RESPONSIVO</h1>
+            <h1 class="azul">DISEÑO RESPONSIVO</h1>
           </div>
           <div>
             <p>
-              Página desarrollada por @pekechis para el Curso "Diseño
-              Responsivo" de la plataforma de formación on-line @openwebinars.
+              Ejercicio para practicar diseño responsivo. Inpirado en ejercicio de @pekechis para la plataforma @openwebinars. Imagenes obtenidas de pixabay.
             </p>
             <p>
-              Establece dos breakpoints, a 576px y a 992px, en los que se
-              produce un cambio en el layout de la página. 
+              Establece dos breakpoints, a 576px y a 992px, en los que se produce un cambio en el layout de la página. 
             </p>
-            <p>El proceso de
-              desarrollo ha sido llevado a cabo empezando desde el diseño para
-              pantallas pequeñas
+            <p>El proceso de desarrollo ha sido llevado a cabo empezando desde el diseño para pantallas pequeñas
             </p>
           </div>
         </section>
@@ -62,10 +57,10 @@
         </section>
       </main>
       <section class="novedades">
-        <h2 class="verde">NOVEDADES</h2>
+        <h2 class="azul">NOTICIAS</h2>
         <article>
-          <h4 >15 de Septiembre</h3>
-          <h3 class="verde">Novedad 1</h3>
+          <h4 >25 de Septiembre</h3>
+          <h3 class="azul">Noticia 1</h3>
           <p>
             Accusantium consectetur, numquam ratione sed ut ipsa earum
             consequatur sunt quae officiis facere tempora nobis pariatur
@@ -74,7 +69,7 @@
         </article>
         <article>
           <h4>15 de Octubre</h>
-          <h3 class="verde">Novedad 2</h3>
+          <h3 class="azul">Noticia 2</h3>
           <p>
             Accusantium consectetur, numquam ratione sed ut ipsa earum
             consequatur sunt quae officiis facere tempora nobis pariatur
@@ -82,8 +77,8 @@
           </p>
         </article>
         <article>
-          <h4>15 de Noviembre</h4>
-          <h3 class="verde">Novedad 3</h3>
+          <h4>18 de Noviembre</h4>
+          <h3 class="azul">Noticia 3</h3>
           <p>
             Accusantium consectetur, numquam ratione sed ut ipsa earum
             consequatur sunt quae officiis facere tempora nobis pariatur
@@ -94,7 +89,7 @@
     </div>
     <script>
         $(function() {
-            //Captura del evento para mostrar u ocultar
+            //Captura del evento para mostrar u ocultar el menu de arriba
             $(".icon").click(function() {
             $(".menu_item").toggle();
             });

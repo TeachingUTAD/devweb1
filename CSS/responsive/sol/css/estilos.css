@@ -14,13 +14,13 @@ body {
   background-color: white;
 }
 /* Para cambir el color de leta de ciertos elementos */
-.verde {
-  color: #0c9b3b;
+.azul {
+  color: #0c27a0;
 }
 
 /* Contenedor general*/
 .container {
-  font-family: "Righteous", cursive;
+  font-family: 'Lato', sans-serif;
   margin: 20px auto;
   width: 90%;
 }
@@ -39,7 +39,7 @@ header {
 
 /*Estilos parte principal*/
 main {
-  background-color: #666666;
+  background-color: #84bbb8;
   display: flex;
   flex-wrap: wrap;
 }
@@ -69,9 +69,52 @@ section.images img {
 }
 
 @media screen and (min-width: 576px) {
-  
+  nav {
+    display: flex;
+  }
+
+  .menu_item {
+    display: inline-block;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .novedades {
+    display: flex;
+  }
+
+  .novedades > * {
+    width: 25%;
+  }
+
+  section.main_text,
+  section.images {
+    width: 50%;
+  }
+
+  section.images img {
+    width: 50%;
+    height: 25%;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  
+  .hidden {
+    display: block;
+  }
+
+  section.images {
+    order: 1;
+  }
+
+  section.main_text {
+    order: 2;
+  }
+
+  section.images img {
+    height: 33%;
+    width: 33%;
+  }
 }
