@@ -19,7 +19,17 @@ body {
   width: 90%;
 }
 
+.content_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 header {
   border-bottom: 1px solid #666666;
@@ -42,10 +52,12 @@ nav div {
 /* El elemento principal */
 main {
   border: 1px solid #aaaaaa;
+  border-radius: 1em;
   height: 400px;
   padding: 1em;
   text-align: center;
   width: 54%;
+  margin-bottom: 1em;
 }
 
 main img {
@@ -57,6 +69,7 @@ main img {
 /* Artículo. Imágenes pequeñas */
 article {
   border: 1px solid #aaaaaa;
+  border-radius: 1em;
   height: 300px;
   padding: 1em;
   text-align: center;
@@ -84,4 +97,10 @@ footer img {
 }
 address{
   font-style: normal;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
