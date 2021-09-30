@@ -7,6 +7,9 @@ const person1 = {
     eyeColor: "blue"
   };
 
+console.log(person1.firstName);
+console.log(person1["firstName"]);
+
 //Estas dos siguientes no se usan mucho
 const person2 = {};
   person2.firstName = "John";
@@ -24,11 +27,15 @@ const person3 = new Object();
 const person = {
     firstName:"John",
     lastName:"Doe",
-    age:50, eyeColor:"blue"
+    age:50, 
+    eyeColor:"blue"
   }
   
   const x = person;
   x.age = 10;      // Will change both x.age and person.age
+
+  console.log(person.age);
+  console.log(x.age);
   
 /**
  * 
@@ -40,22 +47,19 @@ const person = {
  * 
  */
 
- function Jugador() {
-    this.fuerza = 1;
-
-    this.mostrarFuerza = function() {
-        console.log("Tu fuerza es de " + this.fuerza);
-    }
-
-    this.incrementarFuerza = function () {
-        this.fuerza += 1;
-    }
+const jugador = { 
+  fuerza: 1,
+  incrementarFuerza: function(){
+    this.fuerza +=1;
+  },
+  consultarFuerza: function(){
+    return "Tu fuerza es de " + this.fuerza;
+  }
 }
-
-var jugador1 = new Jugador();
-jugador1.mostrarFuerza();  // Tu fuerza es de 1
-jugador1.incrementarFuerza();
-jugador1.mostrarFuerza();  // Tu fuerza es de 2
+ 
+console.log(jugador.consultarFuerza());  // Tu fuerza es de 1
+jugador.incrementarFuerza();
+console.log(jugador.consultarFuerza());  // Tu fuerza es de 2
 
 
 /*
