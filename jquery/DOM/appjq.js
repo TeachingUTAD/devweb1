@@ -37,7 +37,7 @@ $("#create_button").click(function(){
 
 });
 
-/*Añadir codigo al evento 'input' del input de texto 'task_title', que lo que haga sea cambiar el color de fondo
+/*Añadir codigo al evento para cambiar el color de fondo
 en caso que la caja este vacia, o no tenga un valor aceptable, solo letras segun una expresión regular
 */
 $("#task_title").keypress(function(event) {
@@ -45,10 +45,44 @@ $("#task_title").keypress(function(event) {
     let regex = /^[A-Z]/;
     
     if(regex.test(inputValue) || inputValue === '') {
-        console.log(this);
-        this.backgroundColor = 'lightgreen';
+        $(this).css("background-color", "lightgreen");
     } else {
-        this.style.backgroundColor = 'tomato';
+        $(this).css("background-color", "tomato");
+    }
+});
+
+/*Funciona diferente, añadiremos el mismo funcionamiento a varios eventos
+*/
+$("#task_title").on({
+    keypress: function(event) {
+        let inputValue = event.target.value;
+        let regex = /^[A-Z]/;
+        
+        if(regex.test(inputValue) || inputValue === '') {
+            $(this).css("background-color", "lightgreen");
+        } else {
+            $(this).css("background-color", "tomato");
+        }
+    },
+    keydown: function(event) {
+        let inputValue = event.target.value;
+        let regex = /^[A-Z]/;
+        
+        if(regex.test(inputValue) || inputValue === '') {
+            $(this).css("background-color", "lightgreen");
+        } else {
+            $(this).css("background-color", "tomato");
+        }
+    },
+    keyup: function(event) {
+        let inputValue = event.target.value;
+        let regex = /^[A-Z]/;
+        
+        if(regex.test(inputValue) || inputValue === '') {
+            $(this).css("background-color", "lightgreen");
+        } else {
+            $(this).css("background-color", "tomato");
+        }
     }
 });
 
