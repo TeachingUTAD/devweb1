@@ -50,10 +50,6 @@
   <div class="boton"><button  class="cupid-blue" type="submit"  onClick="algoritmo_recursive()">Resuelve Recursivo</button></div>
 </div>
 
-
-
-
-
 <script type="text/javascript">
 
 /*
@@ -88,10 +84,7 @@ function mueveRana(el)
 			
 	} else {
 		alert("You can not move the blank space!")
-	}	
-		
-
-		
+	}		
 	
 	checkWin();
 	//checkBlock();
@@ -185,13 +178,16 @@ function rana_aleatoria(){
 		frog_swap(i,j);
 	}
 	checkWin();
-	checkBlock();	
+	//checkBlock();	
 }
 
 
 /*
 	algoritmo_hardcoded: resuelve el partido siempre que las ranas empiezen
 	desde las posiciones: L L L B R R R
+	setTimeout espera la referencia a una función, por eso no se puede poner la funcion tal cual: 
+	- Si la funcion no tiene parametros, se pone solo el nombre de la funcion, sin los parentesis.
+	- Si la funcion tiene parametros, hay varias formas de hacerlo, pero la mejor es usar funciones arrow con la llamada
 */
 function algoritmo_hardcoded(){
 	setTimeout(()=>{ frog_swap(3,2); },1000);
