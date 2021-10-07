@@ -4,21 +4,22 @@
 <head>
   <meta charset="utf-8">
   <title>Calculadora JQuery</title>
-
   <link rel="stylesheet" href="css/main.css">
 
-  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
-
+  
   <div>
-      <form>
-          <input class="pantalla" id="pantalla" type="text" disabled />
-      </form>
-      <table style="background-color: #555555">
+      
+      <table>
+          <thead>
+              <th colspan="5">
+                <form>
+                    <input class="pantalla" id="pantalla" type="text" disabled />
+                </form>
+              </th>            
+          </thead>
           <tbody>
               <tr>
                   <td>
@@ -33,6 +34,9 @@
                   <td>
                       <button class="boton-operacion">/</button>
                   </td>
+                  <td rowspan="2">
+                    <button class="boton-igual">=</button>
+                </td>
               </tr>
               <tr>
                   <td>
@@ -61,27 +65,32 @@
                   <td>
                       <button class="boton-operacion">+</button>
                   </td>
+                  <td>
+                    <button class="boton-operacion">!</button>
+                </td>
               </tr>
               <tr>
+                  <td></td>
                   <td>
                       <button class="boton-numerico">0</button>
                   </td>
+                  <td></td>
+                  <td>
+                    <button class="boton-operacion">-</button>
+                </td>
                   <td>
                       <button class="boton-borrar">C</button>
                   </td>
-                  <td>
-                      <button>=</button>
-                  </td>
-                  <td>
-                      <button>!</button>
-                  </td>
-                  <td>
-                      <button class="boton-operacion">-</button>
-                  </td>
+                  
+                  
+                  
               </tr>
           </tbody>
       </table>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

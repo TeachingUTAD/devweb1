@@ -33,7 +33,7 @@ $(document).ready(function() {
     } else if ($(this).text() === 'C') {
       pantalla.val('');
     } else if ($(this).text() === '!') {
-      //Esta opcion es para hacer uso de la api REST que nos hace calculos matemáticos, sin usar ajax
+      //Esta opcion es para hacer uso de la api REST que nos hace calculos matemáticos, usando ajax, metodo get(), usando un wrapper.
       // Accedo al valor actual de la pantalla
       const currentValue = pantalla.val();
       const url = 'http://api.mathjs.org/v4/?expr=' + encodeURIComponent(currentValue);
