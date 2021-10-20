@@ -14,7 +14,9 @@ function clickedCell(elemento) {
     //     return;
     // }
     //si cliqueamos en un elemento ya destapado, no hacer nada
+    console.log(parejaActual);
     if (emparejadas.includes(elemento) || parejaActual.includes(elemento)) {
+        console.log("salir")
         return;
     }
 
@@ -43,13 +45,33 @@ function clickedCell(elemento) {
 
         } else {
             //Si no son iguales, limpio el array actual y vuelvo a ponerles la imagen neutra
-            parejaActual.forEach(function (e) {
+            setTimeout(() => {parejaActual.forEach(function (e) {
                 e.src = './img/sky.png';
             });
-            parejaActual = [];
+            parejaActual = [];},
+            1000);
             
         }
     }
+    // if (parejaActual.length === 2) {
+    //     if (parejaActual[0].src === parejaActual[1].src) {
+    //         // Éxito
+    //         parejaActual.forEach(function (e) {
+    //             emparejadas.push(e);
+    //         });
+    //         parejaActual = [];
+
+    //     } else {
+    //         bloqueado = true;
+    //         setTimeout(function() {
+    //             parejaActual.forEach(function (e) {
+    //                 e.src = './img/sky.png';
+    //             });
+    //             parejaActual = [];
+    //             bloqueado = false;
+    //         }, 1000);
+    //     }
+    // }
 }
 
 function refreshPage() {

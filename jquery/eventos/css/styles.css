@@ -37,15 +37,15 @@ th {
 }
 
 /* Estilos para el cuadrado */
-#square {
+#recuadro {
   border: 1px solid black;
   height: 300px;
   margin: 20px auto;
   position: relative;
-  width: 60%;
+  width: 600px;
 }
 
-#square #hijo {
+#recuadro #cuadrado {
   background-color: red;
   position: absolute;
   top: 0px;

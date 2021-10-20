@@ -8,7 +8,6 @@
     <title>Ejercicio Práctico 7.2</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/main.js"></script>
 
 </head>
 
@@ -82,39 +81,7 @@
                 <div class="names">Madrid</div>
             </div>
         </div>
-    </div> <!-- Cuerpo del script en el que trabajaremos -->
-    <!-- <script>
-        // Cuando el documento esté listo $(document).ready(function() {});
-        $(function () {
-
-            $("#representar").on("click", function (event) {
-                //Si quisiera que hiciera un retroceso a cero
-                //$(".graphics div div:not('.names')").animate({
-                //height: "0px"
-                //}, 1000);
-                
-                //Tomo todas las filas del cuerpo de la tabla, no de la cabecera, y por cada una...
-                $("tbody tr").each(function (index) {
-                    let cityIndex = index;
-                    // Tomo todas las celdas dentro de cada fila, menos la primera que es el nombre de la ciudad, ese :gt(0), y por cada una...
-                    $(this).children(":gt(0)").each(function (indice) {
-                        let year_index = indice;
-                        let value = parseInt($(this).text());
-                        //Cuento con que el orden de las ciudades del grafico es el mismo que el de la tabla, y lo mismo con los años y los datos
-                        $(".graphics > div").eq(cityIndex).children().eq(year_index).animate({
-                            "height": value
-                        });
-                    });
-                });
-
-            });
-
-
-            
-
-        });
-
-    </script> -->
+    </div> 
 </body>
 
 </html>
