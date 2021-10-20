@@ -2,12 +2,6 @@
   box-sizing: border-box;
 }
 
-/* Estilos para la calculadora */
-#calculadora > div:nth-child(1) {
-  display: inline-block;
-  width: 50%;
-}
-
 /* Estilos para la tabla */
 table {
   border-collapse: collapse;
