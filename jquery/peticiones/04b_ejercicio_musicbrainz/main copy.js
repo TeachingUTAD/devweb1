@@ -64,7 +64,30 @@ function obtenerReleaseGroup(mbid) {
 
         const releaseId = r.releases[0].id;
 
-  
+        /*$.get(`${api_root}release/${releaseId}?fmt=json`, (releaseResponse) => {
+            console.log(releaseResponse);
+            //document.getElementById('caratula_release_group').src = coverResponse.images[0].image;
+        });*/
+
+
+        //const filtered = r['release-groups'].filter(rg => rg['primary-type'] === 'Album');
+
+        /*filtered.forEach((rg) => {
+            const filaNueva = document.createElement('tr');
+            const celdaTitulo = document.createElement('td');
+            const celdaLanzamiento = document.createElement('td');
+            const celdaThumbnail = document.createElement('td');
+
+            celdaTitulo.innerText = rg.title;
+            celdaLanzamiento.innerText = rg['first-release-date'];
+
+
+            filaNueva.appendChild(celdaTitulo);
+            filaNueva.appendChild(celdaLanzamiento);
+            filaNueva.appendChild(celdaThumbnail);
+
+            document.getElementById('artist_table_body').appendChild(filaNueva);
+        });*/
     });
 }
 
@@ -75,7 +98,7 @@ function getResults(entity, query, offset) {
     $('#btnParent').empty();
 
     $.get(`${api_root}${entity}?query=${query}&offset=${offset}&fmt=json`, (r) => {
-        //console.log(r);
+        console.log(r);
         const count = r.count;
         const r_offset = r.offset;
         const headers_row = document.getElementById('headers_row');
@@ -108,7 +131,6 @@ function getResults(entity, query, offset) {
 
                 filaNueva.appendChild(celdaName);
                 filaNueva.appendChild(celdaDisambiguation);
-                //si se pilsa sobre la fila de artista, se busca por ese artista con ese id concreto
                 filaNueva.onclick = () => {
                     obtenerArtista(resultado.id);
                 };
@@ -130,26 +152,23 @@ function getResults(entity, query, offset) {
             headers_row.appendChild(thArtist);
             headers_row.appendChild(thType);
 
-            // Ordenamos los resultado indicando de que forma, en este caso por el valor del campo score en los valores json
             r['release-groups'].sort((a, b) => {
                 return b.score - a.score;
             });
 
-            // Nos fijamos que aquí no podemos acceder por el punto, ya que este valor tiene un guion en el medio, asi que accedemos usando clave.
-            // Tambien hemos de fijarnos en el JSON devuelto, ya que hay una s en groups que no es como las entities que pasamos para la busqueda.
             r['release-groups'].forEach((resultado) => {
                 const filaNueva = document.createElement('tr');
                 const celdaTitle = document.createElement('td');
                 const celdaArtist = document.createElement('td');
-                const celdaType = document.createElement('td');
+                const celtaType = document.createElement('td');
 
                 celdaTitle.innerText = resultado.title;
                 celdaArtist.innerText = resultado['artist-credit'][0].artist.name;
-                celdaType.innerText = resultado['primary-type'];
+                celtaType.innerText = resultado['primary-type'];
 
                 filaNueva.appendChild(celdaTitle);
                 filaNueva.appendChild(celdaArtist);
-                filaNueva.appendChild(celdaType);
+                filaNueva.appendChild(celtaType);
 
                 filaNueva.onclick = () => {
                     obtenerReleaseGroup(resultado.id);
@@ -161,7 +180,6 @@ function getResults(entity, query, offset) {
             });
         }
 
-        // Configuramos una paginacion si se devuelven mas de 25 resultados, usamos el offset
         if (count > 25) {
             const btnParent = document.getElementById('btnParent');
             if (r_offset > 0) {
