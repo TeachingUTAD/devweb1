@@ -1,7 +1,7 @@
 $(document).ready(() => {
 })
 
-const api_key = ''; // Poned vuestra API KEY, obtenida de OMDb
+const api_key = 'de3d4215'; // Poned vuestra API KEY, obtenida de OMDb
 
 function obtenerPelicula(id) {
     $("#tabla_resultados").hide();
